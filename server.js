@@ -1,5 +1,3 @@
-'use strict'
-
 /*
 |--------------------------------------------------------------------------
 | Http server
@@ -9,17 +7,17 @@
 | customize the process of booting the http server.
 |
 | """ Loading ace commands """
-|     At times you may want to load ace commands when starting the HTTP server.
-|     Same can be done by chaining `loadCommands()` method after
+| At times you may want to load ace commands when starting the HTTP server.
+| Same can be done by chaining `loadCommands()` method after
 |
 | """ Preloading files """
-|     Also you can preload files by calling `preLoad('path/to/file')` method.
-|     Make sure to pass relative path from the project root.
+| Also you can preload files by calling `preLoad('path/to/file')` method.
+| Make sure to pass relative path from the project root.
 */
 
 const { Ignitor } = require('@adonisjs/ignitor')
 
 new Ignitor(require('@adonisjs/fold'))
-  .appRoot(__dirname)
-  .fireHttpServer()
-  .catch(console.error) // eslint-disable-line no-console
+	.appRoot(__dirname)
+	.fireHttpServer()
+	.catch(console.error) // eslint-disable-line no-console

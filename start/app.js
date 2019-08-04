@@ -1,5 +1,3 @@
-'use strict'
-
 const path = require('path')
 
 /*
@@ -13,15 +11,15 @@ const path = require('path')
 |
 */
 const providers = [
-  '@adonisjs/framework/providers/AppProvider',
-  '@adonisjs/framework/providers/ViewProvider',
-  '@adonisjs/lucid/providers/LucidProvider',
-  '@adonisjs/bodyparser/providers/BodyParserProvider',
-  '@adonisjs/cors/providers/CorsProvider',
-  '@adonisjs/shield/providers/ShieldProvider',
-  '@adonisjs/session/providers/SessionProvider',
-  '@adonisjs/auth/providers/AuthProvider',
-  path.join(__dirname, '..', 'providers', 'NuxtProvider')
+	'@adonisjs/framework/providers/AppProvider',
+	'@adonisjs/framework/providers/ViewProvider',
+	'@adonisjs/lucid/providers/LucidProvider',
+	'@adonisjs/bodyparser/providers/BodyParserProvider',
+	'@adonisjs/cors/providers/CorsProvider',
+	'@adonisjs/shield/providers/ShieldProvider',
+	'@adonisjs/session/providers/SessionProvider',
+	'@adonisjs/auth/providers/AuthProvider',
+	path.join(__dirname, '..', 'providers', 'NuxtProvider'),
 ]
 
 /*
@@ -34,7 +32,7 @@ const providers = [
 |
 */
 const aceProviders = [
-  '@adonisjs/lucid/providers/MigrationsProvider'
+	'@adonisjs/lucid/providers/MigrationsProvider',
 ]
 
 /*
@@ -60,7 +58,7 @@ const aliases = {}
 |
 */
 const commands = [
-  'App/Commands/NuxtBuild'
+	'App/Commands/NuxtBuild',
 ]
 
 module.exports = { providers, aceProviders, aliases, commands }

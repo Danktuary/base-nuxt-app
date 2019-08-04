@@ -12,7 +12,6 @@
     "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
-    "cross-env": "^5.2.0",
     "@adonisjs/ace": "^4.0.7",
     "@adonisjs/auth": "^2.0.10",
     "@adonisjs/bodyparser": "^1.0.8",
@@ -23,8 +22,9 @@
     "@adonisjs/lucid": "^4.0.22",
     "@adonisjs/session": "^1.0.19",
     "@adonisjs/shield": "^1.0.4",
-    "iview": "^3.1.5",
     "@nuxtjs/axios": "^5.3.6",
+    "cross-env": "^5.2.0",
+    "iview": "^3.1.5",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
