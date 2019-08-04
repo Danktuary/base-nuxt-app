@@ -6,5 +6,6 @@ module.exports = {
 	extends: 'sora/nuxt',
 	rules: {
 		semi: ['error', 'never'],
+		'newline-per-chained-call': ['warn', { ignoreChainWithDepth: 5 }]
 	},
 }
