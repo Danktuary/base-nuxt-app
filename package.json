@@ -32,7 +32,8 @@
     "@nuxtjs/eslint-module": "^0.2.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
-    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-config-sora": "^2.0.0",
+    "eslint-plugin-nuxt": "^0.4.3",
     "nodemon": "^1.18.9"
   }
 }

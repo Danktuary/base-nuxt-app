@@ -3363,6 +3363,11 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
+eslint-config-sora@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-sora/-/eslint-config-sora-2.1.0.tgz#e9c6db38481e82d3d8698fe0ebca44b7c4b39205"
+  integrity sha512-P5zZS8kLvBPc5rq4FKRXaNS/uQytEFooHLov+fM8YBEECNLm0F5UQbrq8tJLVEGj1eXzrceTeZWZ61L49Jdo1A==
+
 eslint-config-standard@^12.0.0:
   version "12.0.0"
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-12.0.0.tgz#638b4c65db0bd5a41319f96bba1f15ddad2107d9"
@@ -3439,7 +3444,7 @@ eslint-plugin-node@^9.1.0:
     resolve "^1.10.1"
     semver "^6.1.0"
 
-eslint-plugin-nuxt@>=0.4.2:
+eslint-plugin-nuxt@^0.4.3:
   version "0.4.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-nuxt/-/eslint-plugin-nuxt-0.4.3.tgz#4a6114372c3b1311685d19a00a470233fa6a477e"
   integrity sha512-Irw6YjbfNJpC8zykyvWA8cMRGfF97xGNKhwFLyMEeXKMXug9o/FKe7fHhN1qEoMJWI1SKgFr/spVW6ZV41geAQ==
