@@ -1,3 +1,6 @@
+const Env = use('Env')
+const Database = use('Database')
+
 module.exports = {
 	/*
 	|--------------------------------------------------------------------------
@@ -11,7 +14,7 @@ module.exports = {
 	| Available Serializers - lucid, database
 	|
 	*/
-	authenticator: 'session',
+	authenticator: 'jwt',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -63,11 +66,13 @@ module.exports = {
 	jwt: {
 		serializer: 'lucid',
 		model: 'App/Models/User',
+		token: 'App/Models/Token',
 		scheme: 'jwt',
-		uid: 'email',
+		uid: Database.raw('LOWER(username)'),
 		password: 'password',
 		options: {
-			secret: 'self::app.appKey',
+			secret: Env.get('APP_KEY'),
+			expiresIn: 60 * 60 * 24 * 7, // 7 days
 		},
 	},
 }
