@@ -1,5 +1,4 @@
 const Env = use('Env')
-const Database = use('Database')
 
 module.exports = {
 	/*
@@ -68,7 +67,7 @@ module.exports = {
 		model: 'App/Models/User',
 		token: 'App/Models/Token',
 		scheme: 'jwt',
-		uid: Database.raw('LOWER(username)'),
+		uid: 'username',
 		password: 'password',
 		options: {
 			secret: Env.get('APP_KEY'),
