@@ -1,55 +1,72 @@
 <template>
-	<div>
-		<nuxt />
-	</div>
+	<Layout class="layout">
+		<Header class="header">
+			<Menu mode="horizontal" theme="dark" active-name="1">
+				<div class="layout-nav">
+					<MenuItem name="1">
+						<Icon type="ios-navigate" />
+						Item 1
+					</MenuItem>
+					<MenuItem name="2">
+						<Icon type="ios-keypad" />
+						Item 2
+					</MenuItem>
+					<MenuItem name="3">
+						<Icon type="ios-analytics" />
+						Item 3
+					</MenuItem>
+					<MenuItem name="4">
+						<Icon type="ios-paper" />
+						Item 4
+					</MenuItem>
+				</div>
+			</Menu>
+		</Header>
+		<Content>
+			<Breadcrumb class="breadcrumbs">
+				<BreadcrumbItem>
+					<nuxt-link :to="{ name: 'index' }">
+						Home
+					</nuxt-link>
+				</BreadcrumbItem>
+			</Breadcrumb>
+			<Card>
+				<main id="main-content">
+					<Nuxt />
+				</main>
+			</Card>
+		</Content>
+	</Layout>
 </template>
 
-<style>
-html {
-	font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-		Roboto, 'Helvetica Neue', Arial, sans-serif;
-	font-size: 16px;
-	word-spacing: 1px;
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	box-sizing: border-box;
+<style scoped>
+.page-enter-active, .page-leave-active {
+	position: relative;
+	left: 0;
+	top: 0;
+	transition: all 0.25s ease-in-out;
 }
 
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-	margin: 0;
+.page-enter {
+	left: 1em;
+	opacity: 0;
 }
 
-.button--green {
-	display: inline-block;
-	border-radius: 4px;
-	border: 1px solid #3b8070;
-	color: #3b8070;
-	text-decoration: none;
-	padding: 10px 30px;
+.page-leave-to {
+	left: -1em;
+	opacity: 0;
 }
 
-.button--green:hover {
-	color: #fff;
-	background-color: #3b8070;
+.layout {
+	background-color: #f5f7f9;
+	position: relative;
 }
 
-.button--grey {
-	display: inline-block;
-	border-radius: 4px;
-	border: 1px solid #35495e;
-	color: #35495e;
-	text-decoration: none;
-	padding: 10px 30px;
-	margin-left: 15px;
+.layout .header {
+	padding: 0 2rem;
 }
 
-.button--grey:hover {
-	color: #fff;
-	background-color: #35495e;
+.layout .breadcrumbs {
+	margin: 1rem 2rem;
 }
 </style>
