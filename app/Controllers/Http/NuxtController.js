@@ -4,9 +4,9 @@ class NuxtController {
 	}
 
 	async render({ request: { request: req }, response: { response: res } }) {
-		await new Promise((resolve, reject) => {
-			this.nuxt.render(req, res, promise => {
-				promise.then(resolve).catch(reject)
+		return new Promise((resolve, reject) => {
+			return this.nuxt.render(req, res, promise => {
+				return promise.then(resolve).catch(reject)
 			})
 		})
 	}

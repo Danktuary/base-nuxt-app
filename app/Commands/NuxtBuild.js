@@ -32,7 +32,7 @@ class NuxtBuild extends Command {
 	async handle(args, options) {
 		const nuxt = use('Service/Nuxt')
 		this.info('Building nuxt.js application...')
-		await new Builder(nuxt).build()
+		return new Builder(nuxt).build()
 	}
 }
 

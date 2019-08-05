@@ -13,11 +13,8 @@ class NuxtProvider extends ServiceProvider {
 		const Helpers = this.app.use('Helpers')
 		if (!Helpers.isAceCommand()) {
 			const nuxt = this.app.use('Service/Nuxt')
-			if (nuxt.options.dev) {
-				await new Builder(nuxt).build()
-			} else {
-				await nuxt.ready()
-			}
+			if (nuxt.options.dev) return new Builder(nuxt).build()
+			return nuxt.ready()
 		}
 	}
 }
