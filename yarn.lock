@@ -3556,10 +3556,10 @@ eslint-ast-utils@^1.0.0:
     lodash.get "^4.4.2"
     lodash.zip "^4.2.0"
 
-eslint-config-sora@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-sora/-/eslint-config-sora-2.1.0.tgz#e9c6db38481e82d3d8698fe0ebca44b7c4b39205"
-  integrity sha512-P5zZS8kLvBPc5rq4FKRXaNS/uQytEFooHLov+fM8YBEECNLm0F5UQbrq8tJLVEGj1eXzrceTeZWZ61L49Jdo1A==
+eslint-config-sora@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-sora/-/eslint-config-sora-2.1.1.tgz#0d47799431985e0aed2f3e94b2bac2c5e5230a2e"
+  integrity sha512-wKdXuAKwLjABBfZfVJBLmK/VcTldJlIe/Z5AY8s/hRxh5XlhoY9CSH3LeqJPOEkAvGFL+tFgHnxlneUSmLKGOQ==
 
 eslint-config-standard@^12.0.0:
   version "12.0.0"
