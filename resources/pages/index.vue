@@ -1,65 +1,33 @@
 <template>
-	<div class="container">
-		<div>
-			<Logo />
-			<h1 class="title">
-				base-nuxt-app
-			</h1>
-			<h2 class="subtitle">
-				Welcome to the iView + Nuxt.js template
-			</h2>
-			<div class="links">
-				<Button type="primary" target="_blank" to="https://nuxtjs.org/">
-					Documentation
-				</Button>
-				<Button target="_blank" to="https://github.com/nuxt/nuxt.js">
-					GitHub
-				</Button>
-				<Button target="_blank" to="https://www.iviewui.com/">
-					iView
-				</Button>
+	<v-layout column justify-center align-center>
+		<v-flex xs12 sm8 md6>
+			<div class="text-center">
+				<logo />
 			</div>
-		</div>
-	</div>
+			<v-card>
+				<v-card-title class="headline">
+					Welcome to the Vuetify + Nuxt.js template
+				</v-card-title>
+				<v-card-text>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eaque corrupti quos culpa quas possimus? Officia, quod voluptas? Enim ut laborum commodi quod quam temporibus, numquam perspiciatis at odit voluptas.
+				</v-card-text>
+				<v-card-actions>
+					<v-spacer />
+					<v-btn color="primary" nuxt to="/">
+						Continue
+					</v-btn>
+				</v-card-actions>
+			</v-card>
+		</v-flex>
+	</v-layout>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+
 export default {
 	components: {
 		Logo,
 	},
 }
 </script>
-
-<style>
-.container {
-	margin: 0 auto;
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
-
-.title {
-	font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-	display: block;
-	font-weight: 300;
-	font-size: 100px;
-	color: #35495e;
-	letter-spacing: 1px;
-}
-.subtitle {
-	font-weight: 300;
-	font-size: 42px;
-	color: #526488;
-	word-spacing: 5px;
-	padding-bottom: 15px;
-}
-
-.links {
-	padding-top: 15px;
-}
-</style>

@@ -1,4 +1,5 @@
 const { resolve } = require('path')
+const vuetifyColors = require('vuetify/es5/util/colors').default
 
 module.exports = {
 	mode: 'universal',
@@ -8,6 +9,7 @@ module.exports = {
 	** Headers of the page
 	*/
 	head: {
+		titleTemplate: `%s - ${process.env.npm_package_name}`,
 		title: process.env.npm_package_name || '',
 		meta: [
 			{ charset: 'utf-8' },
@@ -25,21 +27,18 @@ module.exports = {
 	/*
 	** Global CSS
 	*/
-	css: [
-		'iview/dist/styles/iview.css',
-	],
+	css: [],
 	/*
 	** Plugins to load before mounting the App
 	*/
-	plugins: [
-		'@/plugins/iview',
-	],
+	plugins: [],
 	/*
 	** Nuxt.js dev-modules
 	*/
-	devModules: [
+	buildModules: [
 		// Doc: https://github.com/nuxt-community/eslint-module
 		'@nuxtjs/eslint-module',
+		'@nuxtjs/vuetify',
 	],
 	/*
 	** Nuxt.js modules
@@ -53,6 +52,27 @@ module.exports = {
 	** See https://axios.nuxtjs.org/options
 	*/
 	axios: {
+	},
+	/*
+	** vuetify module configuration
+	** https://github.com/nuxt-community/vuetify-module
+	*/
+	vuetify: {
+		customVariables: ['~/assets/variables.scss'],
+		theme: {
+			dark: true,
+			themes: {
+				dark: {
+					primary: vuetifyColors.blue.darken2,
+					accent: vuetifyColors.grey.darken3,
+					secondary: vuetifyColors.amber.darken3,
+					info: vuetifyColors.teal.lighten1,
+					warning: vuetifyColors.amber.base,
+					error: vuetifyColors.deepOrange.accent4,
+					success: vuetifyColors.green.accent3,
+				},
+			},
+		},
 	},
 	/*
 	** Build configuration
