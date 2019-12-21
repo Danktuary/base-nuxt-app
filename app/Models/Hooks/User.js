@@ -6,7 +6,7 @@ const UserHook = {}
  * Hash using password as a hook.
  *
  * @method hashPassword
- * @param {Object} userInstance
+ * @param {Object} userInstance The User model instance
  * @return {void}
  */
 UserHook.hashPassword = async userInstance => {
