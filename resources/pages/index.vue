@@ -11,12 +11,6 @@
 				<v-card-text>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eaque corrupti quos culpa quas possimus? Officia, quod voluptas? Enim ut laborum commodi quod quam temporibus, numquam perspiciatis at odit voluptas.
 				</v-card-text>
-				<v-card-actions>
-					<v-spacer />
-					<v-btn color="primary" nuxt to="/">
-						Continue
-					</v-btn>
-				</v-card-actions>
 			</v-card>
 		</v-flex>
 	</v-layout>
